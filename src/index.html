@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto:wght@100&display=swap"
       rel="stylesheet"
@@ -12,43 +14,49 @@
 
     <title>Bruna Mano Estética</title>
   </head>
-  <body>
-    <img
-      class="logo"
-      src="./assets/logoBM.png"
-      alt="Logo Bruna Mano Estética"
-    />
-    <svg
-      width="40"
-      height="40"
-      viewBox="0 0 40 40"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M10 20H30"
-        stroke="#FFFAF1"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M10 12H30"
-        stroke="#FFFAF1"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M18 28L30 28"
-        stroke="#FFFAF1"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
+  <body onscroll="onScroll()">
+    <nav class="navigation">
+      <div class="wrapper">
+        <a href="#">
+          <img
+            class="logo"
+            src="./assets/logoBM.png"
+            alt="Logo Bruna Mano Estética"
+          />
+        </a>
+      </div>
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 20H30"
+          stroke="black"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M10 12H30"
+          stroke="black"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M18 28L30 28"
+          stroke="black"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </nav>
 
-    <header>
+    <header class="wrapper">
       <h4>BOAS-VINDAS À BRUNA MANO ESTÉTICA 👋</h4>
       <h1>Estética corporal e facial para mulheres</h1>
       <p>
@@ -205,5 +213,7 @@
         />
       </svg>
     </header>
+
+    <script src="./main.js"></script>
   </body>
 </html>
