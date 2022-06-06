@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: hsl(17, 75%, 63%);
+  --headline: hsl(210, 11%, 15%);
+  --paragraph: hsl(210, 9%, 31%);
+  --brand-beige: hsl(39, 100%, 97);
+  --brand-light: rgb(255, 223, 209);
+
+  font-size: 62.5%; /*1rem = 10px  (lidar com acessibilidade)*/
+}
+
+body {
+  font-family: 'DM Sans';
+  font-size: 1.6rem;
+
+  text-align: center;
+}
+
+img.logo {
+  width: 8rem;
+  height: 6rem;
+}
+
+header {
+  width: 100vw;
+  max-width: 35rem;
+
+  margin: 0 auto;
+  margin-top: 4.1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  background: #2d856f;
+
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 4rem;
+
+  width: 26.3rem;
+  height: 6.2rem;
+  margin-bottom: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.woman {
+  display: block;
+
+  width: 29rem;
+  margin: 0 auto;
+  object-position: 0 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+  color: var(--paragraph);
+  font-weight: 400;
+
+  margin-bottom: 3.2rem;
+}
+
+h1 {
+  font-size: 3.4rem;
+  color: var(--headline);
+  line-height: 130%;
+
+  margin-bottom: 2.4rem;
+}
+
+h4 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+
+  margin-bottom: 1.6rem;
+}
+
+/* INFOS BOX */
+.infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+
+  background-color: white;
+
+  width: 100%;
+  height: 47rem;
+  margin: 0 auto;
+  padding: 4rem 0;
+
+  border-radius: 2rem;
+  border: 1px solid var(--brand-light);
+}
+
+.info h3 {
+  color: var(--headline);
+  font-size: 4.8rem;
+
+  margin-bottom: 0.4rem;
+}
+
+.info p {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+/**/
+header::before {
+  content: '';
+
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100vw;
+  height: 108rem;
+
+  background-color: var(--brand-light);
+}
