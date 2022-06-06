@@ -277,3 +277,59 @@ body.menu-expanded nav button {
 body.menu-expanded button path {
   stroke: white;
 }
+
+/*---------- SUBTITLES ----------*/
+.subtitle h2 {
+  color: var(--primary-color);
+  font-size: 2.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+
+  margin: 2rem 0;
+}
+.subtitle h3 {
+  color: var(--headline);
+  font-size: 2.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+
+  margin: 2rem 0;
+}
+
+/*---------- SERVIÇOS ----------*/
+#services header {
+  margin-top: 6rem;
+}
+
+#services .card:last-child {
+  margin-bottom: 8rem;
+}
+
+/*---------- CARD ----------*/
+#services .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#services .card {
+  background: white;
+
+  border-radius: 1.6rem;
+  border: 1px solid var(--brand-light);
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem;
+  text-align: left;
+}
+
+#services .card img {
+  align-self: flex-end;
+}
+
+/*---------- FOOTER ----------*/
+div.footer {
+  background-color: var(--primary-color);
+}
