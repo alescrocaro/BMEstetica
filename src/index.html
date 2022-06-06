@@ -17,7 +17,7 @@
   <body onscroll="onScroll()" class="">
     <nav id="navigation">
       <div class="wrapper">
-        <a href="#">
+        <a  onclick="closeMenu()" href="#home">
           <img
             class="logo"
             src="./assets/logoBM-black.png"
@@ -27,13 +27,13 @@
 
         <div class="menu">
           <ul>
-            <li><a href="#start">Início</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#testimonials">Depoimentos</a></li>
+            <li><a onclick="closeMenu()" href="#home">Início</a></li>
+            <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
+            <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
+            <li><a onclick="closeMenu()" href="#testimonials">Depoimentos</a></li>
           </ul>
 
-          <a class="button" href="#contacts">Agende sua consulta</a>
+          <a class="button" onclick="closeMenu()" href="#contact">Agende sua consulta</a>
 
           <ul class="social-medias">
             <li>
@@ -69,45 +69,49 @@
       </div>
     </nav>
 
-    <header class="wrapper">
-      <h4>BOAS-VINDAS À BRUNA MANO ESTÉTICA 👋</h4>
-      <h1>Estética corporal e facial para mulheres</h1>
-      <p>
-        Além da sua pele, uma transformação de autoestima para mulheres
-        decididas!
-      </p>
-      <a href="https://mywhats.net/1226871" target="_blank">
-        <button type="button" class="contact">
-          <img src="./assets/whatsappIcon.svg" alt="Icone do whatsapp" />
-          Agende sua consulta
-        </button>
-      </a>
-      <img
-        class="woman"
-        src="./assets/woman.png"
-        alt="Mulher de perfil vestindo jaleco"
-      />
+    <div class="wrapper">
+      <section id="home">
+        <h4>BOAS-VINDAS À BRUNA MANO ESTÉTICA 👋</h4>
+        <h1>Estética corporal e facial para mulheres</h1>
+        <p>
+          Além da sua pele, uma transformação de autoestima para mulheres
+          decididas!
+        </p>
+        <a href="https://mywhats.net/1226871" target="_blank">
+          <button type="button" class="contact">
+            <img src="./assets/whatsappIcon.svg" alt="Icone do whatsapp" />
+            Agende sua consulta
+          </button>
+        </a>
+        <img
+          class="woman"
+          src="./assets/woman.png"
+          alt="Mulher de perfil vestindo jaleco"
+        /> 
+  
+        <div class="infos">
+          <div class="info">
+            <h3>+777</h3>
+            <p>pacientes atendidos</p>
+          </div>
+          <div class="info">
+            <h3>+777</h3>
+            <p>especialistas disponíveis</p>
+          </div>
+          <div class="info">
+            <h3>+777</h3>
+            <p>anos no mercado</p>
+          </div>
+        </div>
+      </section>
 
-      <div class="infos">
-        <div class="info">
-          <h3>+777</h3>
-          <p>pacientes atendidos</p>
-        </div>
-        <div class="info">
-          <h3>+777</h3>
-          <p>especialistas disponíveis</p>
-        </div>
-        <div class="info">
-          <h3>+777</h3>
-          <p>anos no mercado</p>
-        </div>
-      </div>
-
-      <div id="services">
-        <header>
+      <section id="services">
+        <div>
           <div class="subtitle">
-            <h2>SERVIÇOS</h2>
-            <h3>Como posso ajudá-la a se sentir melhor?</h3>
+            <header>
+              <h2>SERVIÇOS</h2>
+              <h3>Como posso ajudá-la a se sentir melhor?</h3>
+            </header>
           </div>
         </header>
         <div class="cards">
@@ -174,9 +178,9 @@
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="about">
+      <section id="about">
         <div class="subtitle">
           <h2>SOBRE MIM</h2>
           <h3>Entenda minha paixão pela estética</h3>
@@ -188,9 +192,9 @@
           quia officia maiores. Amet minim mollit non deserunt ullamco est sit
           aliqua dolor do amet sint.
         </p>
-      </div>
+      </section>
 
-      <div id="contact">
+      <section id="contact">
         <div class="subtitle">
           <h2>Contato</h2>
         </div>
@@ -204,14 +208,14 @@
             Agende sua consulta
           </button>
         </a>
-      </div>
+      </section>
 
-      <div class="footer">
+      <section id="footer">
         <h2>BM Estética</h2>
         <img src="./assets/instagramIcon.svg" alt="Icone instagram" />
         <img src="./assets/facebookIcon.svg" alt="Icone facebook" />
-      </div>
-    </header>
+      </section>
+    </div>
 
     <script src="./main.js"></script>
   </body>

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 /*---------- GERAL ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   width: 100%;
@@ -17,6 +21,8 @@ body {
   --brand-beige: hsl(39, 100%, 97);
   --brand-light: rgb(255, 223, 209);
 
+  --bg-light: rgb(253, 249, 246);
+
   --nav-height: 7.2rem;
   --container-width: 37.5rem;
 
@@ -29,6 +35,8 @@ body {
 
   text-align: center;
   overflow: overlay;
+
+  background: var(--bg-light);
 }
 
 .wrapper {
@@ -42,12 +50,16 @@ ul {
   list-style: none;
 }
 
-/*---------- HEADER ----------*/
-header {
-  margin-top: calc(4.1rem + var(--nav-height));
+section {
+  padding: 10rem 0;
 }
 
-header::before {
+/*---------- HOME ----------*/
+#home {
+  padding-top: calc(4.1rem + var(--nav-height));
+}
+
+#home::before {
   content: '';
 
   display: block;
@@ -63,14 +75,14 @@ header::before {
 }
 
 /*---------- ANTES DA IMAGEM DA MULHER ----------*/
-h4 {
+#home h4 {
   color: var(--primary-color);
   font-size: 1.4rem;
 
   margin-bottom: 1.6rem;
 }
 
-h1 {
+#home h1 {
   font-size: 3.4rem;
   color: var(--headline);
   line-height: 130%;
@@ -78,7 +90,7 @@ h1 {
   margin-bottom: 2.4rem;
 }
 
-p {
+#home p {
   font-size: 1.8rem;
   color: var(--paragraph);
   font-weight: 400;
@@ -108,7 +120,7 @@ button.contact {
 }
 
 /*---------- IMAGEM MULHER ----------*/
-img.woman {
+#home img.woman {
   display: block;
 
   width: 29rem;
@@ -117,7 +129,7 @@ img.woman {
 }
 
 /*---------- CARD INFOS ----------*/
-.infos {
+#home .infos {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -135,14 +147,14 @@ img.woman {
   border: 1px solid var(--brand-light);
 }
 
-.info h3 {
+#home .info h3 {
   color: var(--headline);
   font-size: 4.8rem;
 
   margin-bottom: 0.4rem;
 }
 
-.info p {
+#home .info p {
   margin: 0;
   color: var(--primary-color);
 }
@@ -213,6 +225,10 @@ body.menu-expanded .close-menu {
   visibility: visible;
 }
 
+.menu {
+  transform: translateX(100%);
+}
+
 body.menu-expanded .menu {
   position: fixed;
   top: 0;
@@ -222,6 +238,10 @@ body.menu-expanded .menu {
   width: 100vw;
   height: 100vh;
   padding-top: var(--nav-height);
+
+  transition: transform 300ms;
+
+  transform: translateX(0);
 }
 
 body.menu-expanded nav {
@@ -286,7 +306,7 @@ body.menu-expanded button path {
   letter-spacing: 0.08rem;
   text-transform: uppercase;
 
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 .subtitle h3 {
   color: var(--headline);
@@ -294,31 +314,22 @@ body.menu-expanded button path {
   line-height: 150%;
   letter-spacing: 0.08rem;
 
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
-/*---------- SERVIÇOS ----------*/
-#services header {
-  margin-top: 6rem;
-}
-
-#services .card:last-child {
-  margin-bottom: 8rem;
-}
-
-/*---------- CARD ----------*/
+/*---------- SERVICES CARD ----------*/
 #services .cards {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3.2rem;
 }
+
 #services .card {
   background: white;
 
   border-radius: 1.6rem;
   border: 1px solid var(--brand-light);
 
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding: 2.4rem;
@@ -329,7 +340,10 @@ body.menu-expanded button path {
   align-self: flex-end;
 }
 
+#services .card h3 {
+  margin: 1rem 0;
+}
 /*---------- FOOTER ----------*/
-div.footer {
+#footer {
   background-color: var(--primary-color);
 }
