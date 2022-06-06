@@ -4,9 +4,11 @@
 }
 
 :root {
-  --primary-color: hsl(17, 69%, 73%);
+  --primary-color: hsl(17, 75%, 63%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
+  --brand-beige: hsl(39, 100%, 97);
+  --brand-light: rgb(255, 223, 209);
 
   font-size: 62.5%; /*1rem = 10px  (lidar com acessibilidade)*/
 }
@@ -18,12 +20,21 @@ body {
   text-align: center;
 }
 
-header {
-  width: 37.5rem;
+img.logo {
+  width: 8rem;
+  height: 6rem;
+}
 
-  margin-left: auto;
-  margin-right: auto;
+header {
+  width: 100vw;
+  max-width: 35rem;
+
+  margin: 0 auto;
   margin-top: 4.1rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
@@ -48,8 +59,12 @@ button {
   margin-right: auto;
 }
 
-img {
-  max-height: 50rem;
+img.woman {
+  display: block;
+
+  width: 29rem;
+  margin: 0 auto;
+  object-position: 0 2rem;
 }
 
 p {
@@ -73,4 +88,51 @@ h4 {
   font-size: 1.4rem;
 
   margin-bottom: 1.6rem;
+}
+
+/* INFOS BOX */
+.infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+
+  background-color: white;
+
+  width: 100%;
+  height: 47rem;
+  margin: 0 auto;
+  padding: 4rem 0;
+
+  border-radius: 2rem;
+  border: 1px solid var(--brand-light);
+}
+
+.info h3 {
+  color: var(--headline);
+  font-size: 4.8rem;
+
+  margin-bottom: 0.4rem;
+}
+
+.info p {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+/**/
+header::before {
+  content: '';
+
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100vw;
+  height: 108rem;
+
+  background-color: var(--brand-light);
 }
