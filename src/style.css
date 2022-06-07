@@ -16,6 +16,7 @@ body {
 
 :root {
   --primary-color: hsl(17, 75%, 63%);
+  --primary-color-hover: hsl(17, 55%, 48%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(39, 100%, 97);
@@ -54,6 +55,150 @@ section {
   padding: 10rem 0;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  background: var(--primary-color);
+
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 4rem;
+
+  padding: 2.4rem 3.2rem;
+  width: fit-content;
+}
+
+.button:hover {
+  background-color: var(--primary-color-hover);
+  transition: background 0.2s;
+}
+
+/*---------- NAVIGATION ----------*/
+img.logo {
+  display: block;
+
+  max-height: calc(0.8 * var(--nav-height));
+}
+
+nav {
+  display: flex;
+
+  width: 100vw;
+  height: var(--nav-height);
+
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 100;
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* max-width: var(--container-width); */
+}
+
+nav.scroll {
+  background-color: var(--primary-color);
+}
+
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/*---------- MENU EXPANDED ----------*/
+body.menu-expanded {
+  overflow: hidden;
+}
+
+body.menu-expanded > :not(nav) {
+  visibility: hidden;
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu {
+  transform: translateX(100%);
+}
+
+body.menu-expanded .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+
+  width: 100vw;
+  height: 100vh;
+  padding-top: var(--nav-height);
+
+  transition: transform 400ms;
+
+  transform: translateX(0);
+}
+
+.menu ul:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+
+  margin-top: 6rem;
+
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+}
+
+.menu ul li a {
+  color: black;
+}
+
+.menu ul li:last-child {
+  margin-bottom: 6rem;
+}
+
+.menu .button:hover {
+  background-color: hsl(0, 0%, 90%);
+  color: var(--primary-color-hover);
+}
+
+.social-medias {
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded nav button {
+  position: relative;
+  z-index: 100;
+}
+
+body.menu-expanded button path {
+  stroke: white;
+}
+
 /*---------- HOME ----------*/
 #home {
   padding-top: calc(4.1rem + var(--nav-height));
@@ -72,6 +217,10 @@ section {
   height: calc(104rem + var(--nav-height));
 
   background-color: var(--brand-light);
+}
+
+#home .button {
+  margin: 0 auto;
 }
 
 /*---------- ANTES DA IMAGEM DA MULHER ----------*/
@@ -96,27 +245,6 @@ section {
   font-weight: 400;
 
   margin-bottom: 3.2rem;
-}
-
-button.contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.6rem;
-  background: #2d856f;
-
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: 700;
-
-  border: none;
-  border-radius: 4rem;
-
-  width: 26.3rem;
-  height: 6.2rem;
-  margin: 0 auto;
-  margin-bottom: 6rem;
 }
 
 /*---------- IMAGEM MULHER ----------*/
@@ -164,142 +292,8 @@ a {
   text-decoration: none;
 }
 
-/*---------- NAVIGATION ----------*/
-img.logo {
-  display: block;
-
-  max-height: calc(0.8 * var(--nav-height));
-}
-
-nav {
-  display: flex;
-
-  height: var(--nav-height);
-
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-nav .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* max-width: var(--container-width); */
-}
-
-nav.scroll {
-  background-color: var(--primary-color);
-
-  width: 100vw;
-  position: fixed;
-  top: 0;
-}
-
-nav button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/*---------- MENU EXPANDED ----------*/
-body.menu-expanded {
-  overflow: hidden;
-}
-
-body.menu-expanded > :not(nav) {
-  display: none;
-}
-
-.menu,
-.close-menu,
-body.menu-expanded .open-menu {
-  opacity: 0;
-  visibility: hidden;
-}
-
-body.menu-expanded .menu,
-body.menu-expanded .close-menu {
-  opacity: 1;
-  visibility: visible;
-}
-
-.menu {
-  transform: translateX(100%);
-}
-
-body.menu-expanded .menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: var(--primary-color);
-
-  width: 100vw;
-  height: 100vh;
-  padding-top: var(--nav-height);
-
-  transition: transform 300ms;
-
-  transform: translateX(0);
-}
-
-body.menu-expanded nav {
-  position: relative;
-}
-
-.menu ul:nth-child(1) {
-  display: flex;
-  flex-direction: column;
-  gap: 4.8rem;
-
-  margin-top: 6rem;
-
-  font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 3.1rem;
-}
-
-.menu ul li a {
-  color: white;
-}
-
-.menu .button {
-  background: white;
-
-  color: var(--primary-color);
-  font-weight: 700;
-  font-size: 1.8rem;
-  line-height: 2.3rem;
-  text-transform: uppercase;
-
-  border-radius: 4rem;
-
-  display: inline-block;
-  padding: 1.6rem 3.2rem;
-  margin-top: 4.8rem;
-  margin-bottom: 8rem;
-}
-
-.social-medias {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.2rem;
-}
-
-body.menu-expanded .logo,
-body.menu-expanded nav button {
-  position: relative;
-  z-index: 100;
-}
-
-body.menu-expanded button path {
-  stroke: white;
-}
-
 /*---------- SUBTITLES ----------*/
-.subtitle h2 {
+section header h2 {
   color: var(--primary-color);
   font-size: 2.4rem;
   line-height: 150%;
@@ -308,7 +302,7 @@ body.menu-expanded button path {
 
   margin-bottom: 2rem;
 }
-.subtitle h3 {
+section header h3 {
   color: var(--headline);
   font-size: 2.4rem;
   line-height: 150%;
@@ -343,7 +337,55 @@ body.menu-expanded button path {
 #services .card h3 {
   margin: 1rem 0;
 }
+
+/*---------- CONTACT ----------*/
+
+#contact .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#contact .location {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.woman-smartphone {
+  width: calc(0.9 * var(--container-width));
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem var(--primary-color-hover);
+  margin-top: 2rem;
+}
+
 /*---------- FOOTER ----------*/
 #footer {
+  padding-block: 6rem;
+  text-align: left;
+
+  color: black;
   background-color: var(--primary-color);
+}
+
+#footer .brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-left: -1rem;
+}
+
+#footer .logo {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 1.6rem;
+}
+
+#footer .social-medias {
+  display: flex;
+  justify-content: left;
+  gap: 2.4rem;
 }

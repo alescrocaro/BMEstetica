@@ -17,8 +17,9 @@
   <body onscroll="onScroll()" class="">
     <nav id="navigation">
       <div class="wrapper">
-        <a  onclick="closeMenu()" href="#home">
+        <a onclick="closeMenu()" href="#home">
           <img
+            id="img-logo"
             class="logo"
             src="./assets/logoBM-black.png"
             alt="Logo Bruna Mano Estética"
@@ -30,10 +31,11 @@
             <li><a onclick="closeMenu()" href="#home">Início</a></li>
             <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
             <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
-            <li><a onclick="closeMenu()" href="#testimonials">Depoimentos</a></li>
+            <li><a onclick="closeMenu()" href="#contact">Contato</a></li>
+            <li>
+              <a onclick="closeMenu()" href="#testimonials">Depoimentos</a>
+            </li>
           </ul>
-
-          <a class="button" onclick="closeMenu()" href="#contact">Agende sua consulta</a>
 
           <ul class="social-medias">
             <li>
@@ -69,154 +71,191 @@
       </div>
     </nav>
 
-    <div class="wrapper">
-      <section id="home">
-        <h4>BOAS-VINDAS À BRUNA MANO ESTÉTICA 👋</h4>
-        <h1>Estética corporal e facial para mulheres</h1>
-        <p>
-          Além da sua pele, uma transformação de autoestima para mulheres
-          decididas!
-        </p>
-        <a href="https://mywhats.net/1226871" target="_blank">
-          <button type="button" class="contact">
+    <section id="home">
+      <div class="wrapper">
+        <header>
+          <h4>BOAS-VINDAS À BRUNA MANO ESTÉTICA 👋</h4>
+          <h1>Estética corporal e facial para mulheres</h1>
+        </header>
+        <div class="content">
+          <p>
+            Além da sua pele, uma transformação de autoestima para mulheres
+            decididas!
+          </p>
+          <a class="button" href="#contact">
             <img src="./assets/whatsappIcon.svg" alt="Icone do whatsapp" />
             Agende sua consulta
-          </button>
-        </a>
-        <img
-          class="woman"
-          src="./assets/woman.png"
-          alt="Mulher de perfil vestindo jaleco"
-        /> 
-  
-        <div class="infos">
-          <div class="info">
-            <h3>+777</h3>
-            <p>pacientes atendidos</p>
-          </div>
-          <div class="info">
-            <h3>+777</h3>
-            <p>especialistas disponíveis</p>
-          </div>
-          <div class="info">
-            <h3>+777</h3>
-            <p>anos no mercado</p>
+          </a>
+          <img
+            class="woman"
+            src="./assets/woman-doctor.png"
+            alt="Mulher de perfil vestindo jaleco"
+          />
+
+          <div class="infos">
+            <div class="info">
+              <h3>+777</h3>
+              <p>pacientes atendidos</p>
+            </div>
+            <div class="info">
+              <h3>+777</h3>
+              <p>especialistas disponíveis</p>
+            </div>
+            <div class="info">
+              <h3>+777</h3>
+              <p>anos no mercado</p>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="services">
-        <div>
-          <div class="subtitle">
-            <header>
-              <h2>SERVIÇOS</h2>
-              <h3>Como posso ajudá-la a se sentir melhor?</h3>
-            </header>
-          </div>
+    <section id="services">
+      <div class="wrapper">
+        <header class="subtitle">
+          <h2>SERVIÇOS</h2>
+          <h3>Como posso ajudá-la a se sentir melhor?</h3>
         </header>
-        <div class="cards">
-          <div class="card">
-            <img src="./assets/checkIcon.svg" alt="check icon" />
-            <h3>Depilação</h3>
-            <p>
-              descrição descrição descrição descrição descrição descrição
-              descrição descrição descrição descrição descrição
-            </p>
-          </div>
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <img src="./assets/checkIcon.svg" alt="check icon" />
+              <h3>Depilação</h3>
+              <p>
+                descrição descrição descrição descrição descrição descrição
+                descrição descrição descrição descrição descrição
+              </p>
+            </div>
 
-          <div class="card">
-            <img src="./assets/checkIcon.svg" alt="check icon" />
-            <h3>Massagem modeladora</h3>
-            <p>
-              descrição descrição descrição descrição descrição descrição
-              descrição descrição descrição descrição descrição
-            </p>
-          </div>
+            <div class="card">
+              <img src="./assets/checkIcon.svg" alt="check icon" />
+              <h3>Massagem modeladora</h3>
+              <p>
+                descrição descrição descrição descrição descrição descrição
+                descrição descrição descrição descrição descrição
+              </p>
+            </div>
 
-          <div class="card">
-            <img src="./assets/checkIcon.svg" alt="check icon" />
-            <h3>Massagem relaxante</h3>
-            <p>
-              descrição descrição descrição descrição descrição descrição
-              descrição descrição descrição descrição descrição
-            </p>
-          </div>
+            <div class="card">
+              <img src="./assets/checkIcon.svg" alt="check icon" />
+              <h3>Massagem relaxante</h3>
+              <p>
+                descrição descrição descrição descrição descrição descrição
+                descrição descrição descrição descrição descrição
+              </p>
+            </div>
 
-          <div class="card">
-            <img src="./assets/checkIcon.svg" alt="check icon" />
-            <h3>Drenagem linfática</h3>
-            <p>
-              descrição descrição descrição descrição descrição descrição
-              descrição descrição descrição descrição descrição
-            </p>
-          </div>
+            <div class="card">
+              <img src="./assets/checkIcon.svg" alt="check icon" />
+              <h3>Drenagem linfática</h3>
+              <p>
+                descrição descrição descrição descrição descrição descrição
+                descrição descrição descrição descrição descrição
+              </p>
+            </div>
 
-          <div class="card">
-            <img src="./assets/checkIcon.svg" alt="check icon" />
-            <h3>Design de sobrancelhas</h3>
-            <p>
-              descrição descrição descrição descrição descrição descrição
-              descrição descrição descrição descrição descrição
-            </p>
-          </div>
+            <div class="card">
+              <img src="./assets/checkIcon.svg" alt="check icon" />
+              <h3>Design de sobrancelhas</h3>
+              <p>
+                descrição descrição descrição descrição descrição descrição
+                descrição descrição descrição descrição descrição
+              </p>
+            </div>
 
-          <div class="card">
-            <img src="./assets/checkIcon.svg" alt="check icon" />
-            <h3>Microagulhamento</h3>
-            <p>
-              descrição descrição descrição descrição descrição descrição
-              descrição descrição descrição descrição descrição
-            </p>
-          </div>
+            <div class="card">
+              <img src="./assets/checkIcon.svg" alt="check icon" />
+              <h3>Microagulhamento</h3>
+              <p>
+                descrição descrição descrição descrição descrição descrição
+                descrição descrição descrição descrição descrição
+              </p>
+            </div>
 
-          <div class="card">
-            <img src="./assets/checkIcon.svg" alt="check icon" />
-            <h3>Limpeza de pele</h3>
-            <p>
-              descrição descrição descrição descrição descrição descrição
-              descrição descrição descrição descrição descrição
-            </p>
+            <div class="card">
+              <img src="./assets/checkIcon.svg" alt="check icon" />
+              <h3>Limpeza de pele</h3>
+              <p>
+                descrição descrição descrição descrição descrição descrição
+                descrição descrição descrição descrição descrição
+              </p>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="about">
-        <div class="subtitle">
+    <section id="about">
+      <div class="wrapper">
+        <header>
           <h2>SOBRE MIM</h2>
           <h3>Entenda minha paixão pela estética</h3>
+        </header>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+            eveniet unde sed. Laboriosam quos eligendi doloremque, possimus
+            sequi distinctio dolore impedit magni, dolorum minima nam velit
+            voluptate quia officia maiores. Amet minim mollit non deserunt
+            ullamco est sit aliqua dolor do amet sint.
+          </p>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eveniet
-          unde sed. Laboriosam quos eligendi doloremque, possimus sequi
-          distinctio dolore impedit magni, dolorum minima nam velit voluptate
-          quia officia maiores. Amet minim mollit non deserunt ullamco est sit
-          aliqua dolor do amet sint.
-        </p>
-      </section>
+      </div>
+    </section>
 
-      <section id="contact">
-        <div class="subtitle">
+    <section id="contact">
+      <div class="wrapper">
+        <header>
           <h2>Contato</h2>
-        </div>
-        <p>
-          <img src="./assets/locationIcon.svg" alt="Icone de localização" />
-          R. Maria José, 777, Colina
-        </p>
-        <a href="https://mywhats.net/1226871">
-          <button target="_blank" class="contact">
+        </header>
+        <div class="content">
+          <div class="location">
+            <img src="./assets/locationIcon.svg" alt="Icone de localização" />
+            R. Maria José Maria José Maria, 777, Vilinha Colina
+          </div>
+          <a class="button" href="https://wa.me/5517997291448" target="_blank">
             <img src="./assets/whatsappIcon.svg" alt="Icone do whatsapp" />
             Agende sua consulta
-          </button>
-        </a>
-      </section>
+          </a>
+          <img
+            class="woman-smartphone"
+            src="./assets/woman-smartphone.jpg"
+            alt="Mulher com telefone"
+          />
+        </div>
+      </div>
+    </section>
 
-      <section id="footer">
-        <h2>BM Estética</h2>
-        <img src="./assets/instagramIcon.svg" alt="Icone instagram" />
-        <img src="./assets/facebookIcon.svg" alt="Icone facebook" />
-      </section>
-    </div>
+    <section id="footer">
+      <div class="wrapper">
+        <div class="brand">
+          <img
+            class="logo"
+            src="./assets/logoBM-black.png"
+            alt="Logo Bruna Mano Estética"
+          />
+          <h2>Bruna Mano Estética</h2>
+        </div>
+        <p>
+          @2020 bmestetica. <br />
+          Todos os direitos reservados.
+        </p>
+        <ul class="social-medias">
+          <li>
+            <a href="https://instagram.com/brunamanoestetica" target="_blank">
+              <img src="./assets/instagramIcon.svg" alt="Icone instagram" />
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com/brunamanoestetica" target="_blank">
+              <img src="./assets/facebookIcon.svg" alt="Icone facebook" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./main.js"></script>
   </body>
 </html>
