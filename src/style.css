@@ -48,6 +48,12 @@ body {
   padding-inline: 2.4rem;
 }
 
+.wrapper > :not(nav) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 ul {
   list-style: none;
 }
@@ -326,6 +332,7 @@ section header h3 {
 #about .degrees {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
 }
 
