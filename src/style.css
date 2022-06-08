@@ -355,7 +355,7 @@ section header h3 {
   gap: 1rem;
 }
 
-.woman-smartphone {
+.illustrative-pic {
   width: calc(0.9 * var(--container-width));
   border-radius: 1rem;
   box-shadow: 0 0 1rem var(--primary-color-hover);

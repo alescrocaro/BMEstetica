@@ -42,9 +42,12 @@ ScrollReveal({
   #testimonials .card,
   #about,
   #about header,
-  #about content,
+  #about p,
+  #about img,
   #contact,
   #contact header,
-  #contact .content
+  #contact .location,
+  #contact a,
+  #contact img
   `
 );
