@@ -43,6 +43,8 @@ ScrollReveal({
   #about,
   #about header,
   #about p,
+  #about h3,
+  #about .degree,
   #about img,
   #contact,
   #contact header,
