@@ -313,13 +313,13 @@ section header h3 {
 }
 
 /*---------- SERVICES CARD ----------*/
-#services .cards {
+.cards {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
 }
 
-#services .card {
+.card {
   background: white;
 
   border-radius: 1.6rem;
@@ -328,6 +328,7 @@ section header h3 {
   display: flex;
   flex-direction: column;
   padding: 2.4rem;
+  /*width: fit-content;*/
   text-align: left;
 }
 
@@ -335,7 +336,7 @@ section header h3 {
   align-self: flex-end;
 }
 
-#services .card h3 {
+.card h3 {
   margin: 1rem 0;
 }
 
