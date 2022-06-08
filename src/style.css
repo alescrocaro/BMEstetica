@@ -48,7 +48,7 @@ body {
   padding-inline: 2.4rem;
 }
 
-.wrapper > :not(nav) {
+.wrapper > :not(nav) :not(footer) {
   display: flex;
   flex-direction: column;
   align-items: center;
