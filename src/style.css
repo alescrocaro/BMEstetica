@@ -15,14 +15,15 @@ body {
 }
 
 :root {
-  --primary-color: hsl(17, 75%, 63%);
-  --primary-color-hover: hsl(17, 55%, 48%);
+  --hue: 17;
+  --primary-color: hsl(var(--hue), 75%, 63%);
+  --primary-color-hover: hsl(var(--hue), 55%, 48%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(39, 100%, 97);
-  --brand-light: rgb(255, 223, 209);
+  --brand-light: hsl(18, 100%, 91%);
 
-  --bg-light: rgb(253, 249, 246);
+  --bg-light: hsl(26, 64%, 98%);
 
   --nav-height: 7.2rem;
   --container-width: 37.5rem;
@@ -60,7 +61,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 1.6rem;
-  background: var(--primary-color);
+  background: #00856f;
 
   color: #fff;
   text-transform: uppercase;
@@ -75,7 +76,7 @@ section {
 }
 
 .button:hover {
-  background-color: var(--primary-color-hover);
+  background-color: #00453a;
   transition: background 0.2s;
 }
 
@@ -361,7 +362,7 @@ section header h3 {
 }
 
 /*---------- FOOTER ----------*/
-#footer {
+footer {
   padding-block: 6rem;
   text-align: left;
 
@@ -369,23 +370,47 @@ section header h3 {
   background-color: var(--primary-color);
 }
 
-#footer .brand {
+footer .brand {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin-left: -1rem;
 }
 
-#footer .logo {
+footer .logo {
   width: 8rem;
   height: 8rem;
   margin-bottom: 1.6rem;
 }
 
-#footer .social-medias {
+footer p {
+  margin-bottom: 3.2rem;
+}
+
+footer .social-medias {
   display: flex;
   justify-content: left;
   gap: 2.4rem;
+  margin: 0;
+}
+
+/*---------- BACK TO TOP ----------*/
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 3rem;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(100%);
+  transition: 300ms;
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
 }

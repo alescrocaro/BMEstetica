@@ -14,7 +14,7 @@
 
     <title>Bruna Mano Estética</title>
   </head>
-  <body onscroll="onScroll()" class="">
+  <body>
     <nav id="navigation">
       <div class="wrapper">
         <a onclick="closeMenu()" href="#home">
@@ -30,11 +30,11 @@
           <ul>
             <li><a onclick="closeMenu()" href="#home">Início</a></li>
             <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
-            <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
-            <li><a onclick="closeMenu()" href="#contact">Contato</a></li>
             <li>
               <a onclick="closeMenu()" href="#testimonials">Depoimentos</a>
             </li>
+            <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
+            <li><a onclick="closeMenu()" href="#contact">Contato</a></li>
           </ul>
 
           <ul class="social-medias">
@@ -199,6 +199,12 @@
             voluptate quia officia maiores. Amet minim mollit non deserunt
             ullamco est sit aliqua dolor do amet sint.
           </p>
+
+          <img
+            class="woman-smartphone"
+            src="./assets/woman-appointment.jpg"
+            alt="Mulher com telefone"
+          />
         </div>
       </div>
     </section>
@@ -226,7 +232,7 @@
       </div>
     </section>
 
-    <section id="footer">
+    <footer>
       <div class="wrapper">
         <div class="brand">
           <img
@@ -253,7 +259,14 @@
           </li>
         </ul>
       </div>
-    </section>
+    </footer>
+
+    <a id="backToTopButton" href="#home">
+      <img
+        src="./assets/backToTopIcon.svg"
+        alt="Botão para voltar ao topo da página"
+      />
+    </a>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./main.js"></script>
